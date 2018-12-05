@@ -1,4 +1,4 @@
 <div class="pagination">
   <button class="pagination__button prev" *ngIf="currentPage !== 0" (click)="prevPage()"></button>
-  <button class="pagination__button" *ngIf="currentPage < pageCount" (click)="nextPage()"></button>
+  <button class="pagination__button" *ngIf="currentPage < pageCount - 1" (click)="nextPage()"></button>
 </div>

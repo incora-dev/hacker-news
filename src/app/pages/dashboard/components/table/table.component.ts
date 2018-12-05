@@ -15,4 +15,12 @@ export class TableComponent implements OnInit {
   ngOnInit() {
   }
 
+  public getHostname(url) {
+    if (url) {
+      return (new URL(url)).hostname;
+    } else {
+      return 'no link';
+    }
+  }
+
 }

@@ -24,7 +24,7 @@ export class PaginationBarComponent implements OnInit {
   }
 
   public nextPage() {
-    if (this.currentPage < this.pageCount) {
+    if (this.currentPage < this.pageCount - 1) {
       ++this.currentPage;
       this.changePage.emit(this.currentPage);
     }

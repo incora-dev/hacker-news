@@ -17,6 +17,8 @@ import { NewsComponent } from './pages/dashboard/components/news/news.component'
 import { HeaderComponent } from './pages/dashboard/components/header/header.component';
 import { FooterComponent } from './pages/dashboard/components/footer/footer.component';
 
+import { TimeAgoPipe } from 'time-ago-pipe';
+
 import {
   ItemEffects,
   NewsEffects,
@@ -38,6 +40,7 @@ import { PaginationBarComponent } from './pages/dashboard/components/pagination-
     FooterComponent,
     TableComponent,
     PaginationBarComponent,
+    TimeAgoPipe,
   ],
   imports: [
     BrowserModule,

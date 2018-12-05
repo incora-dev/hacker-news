@@ -3,10 +3,10 @@
   <div class="item__info">
     <div class="item__header">
       <a href="{{item.url}}" target="_blank" class="item__header-title">{{item.title}}</a>
-      <a href="{{item.url}}" class="item__header-link">({{item.url}})</a>
+      <a href="{{item.url}}" class="item__header-link">({{getHostname(item.url)}})</a>
     </div>
     <div class="item__subblock">
-      <div>{{item.score}} points by <a href="/" class="item__header-link small">{{item.by}}</a> <a href="/" class="item__header-link small">{{item.time}}</a></div>
+      <div>{{item.score}} points by <a href="/" class="item__header-link small">{{item.by}}</a> <a href="/" class="item__header-link small">{{item.time | timeAgo}}</a></div>
       <div>{{item.descendants}} comments</div>
     </div>
   </div>
