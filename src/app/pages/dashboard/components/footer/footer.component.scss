@@ -1,0 +1,54 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/mixins.scss';
+
+.footer {
+  padding: 20px 0;
+  border-top: 2px solid $safetyOrange;
+  &__main {
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    @media screen and (max-width: 991px) {
+      padding: 0 15px;
+    }
+  }
+  &__menu {
+    margin-bottom: 20px;
+    &-list {
+      list-style: none;
+      display: flex;
+      padding-left: 0;
+      margin: 0;
+      &-item {
+        padding: 0 10px;
+        a {
+          @include font-style($size: $sizeSmall, $weight: $lightWeight, $color: $black, $textDecoration: none);
+        }
+      }
+    }
+  }
+  &__menu,
+  &__search {
+    display: flex;
+    justify-content: center;
+  }
+  &__search {
+    &-title {
+      @include font-style($size: $sizeNormal, $color: $gray, $lineHeight: 22px);
+    }
+    &-input {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      @include font-style($color: $black);
+      margin-left: 5px;
+      border: 1px solid $lightGray;
+      border-radius: 10px;
+      padding: 2px 6px;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

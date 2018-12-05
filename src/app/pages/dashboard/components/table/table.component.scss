@@ -1,3 +1,51 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/mixins.scss';
+
 .item {
-  padding: 20px 10px;
+  display: flex;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 10px;
+  border-bottom: 1px solid $lightGray;
+
+  &__index {
+    @include font-style($size: $sizeNormal, $lineHeight: 20px, $weight: $boldWeight);
+    width: 30px;
+  }
+
+  &__info {
+    width: calc(100% - 30px);
+  }
+
+  &__header {
+    line-height: 18px;
+    &-title {
+      @include font-style($size: $sizeNormal, $lineHeight: 18px, $weight: $boldWeight, $color: $black, $textDecoration: none);
+      margin-right: 5px;
+    }
+    &-link {
+      @include font-style($size: $sizeSmall, $lineHeight: 16px, $weight: $lightWeight, $color: $gray, $textDecoration: none);
+      transition: all 0.4s ease-in-out;
+      &.small {
+        font-size: $sizexs;
+        margin-right: 3px;
+        letter-spacing: 0.3px;
+      }
+      &:hover {
+        color: $black;
+      }
+    }
+    &-title,
+    &-link {
+      display: inline-block;
+    }
+  }
+
+  &__subblock {
+    display: flex;
+    @include font-style($size: $sizexs, $weight: $lightWeight, $lineHeight: 16px, $color: $gray, $textDecoration: none);
+    letter-spacing: 0.3px;
+    @media screen and (max-width: 440px) {
+      flex-direction: column;
+    }
+  }
 }

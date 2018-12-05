@@ -1,6 +1,13 @@
-<div class="item" *ngFor="let item of items">
-  <div>Title:{{item.title}}</div>
-  <div>Link:{{item.url}}</div>
-  <div>{{item.score}} points by {{item.by}} {{item.time}}</div>
-  <div>{{item.descendants}} comments</div>
+<div class="item" *ngFor="let item of items; let i = index">
+  <div class="item__index">{{startIndex + i}}</div>
+  <div class="item__info">
+    <div class="item__header">
+      <a href="{{item.url}}" target="_blank" class="item__header-title">{{item.title}}</a>
+      <a href="{{item.url}}" class="item__header-link">({{item.url}})</a>
+    </div>
+    <div class="item__subblock">
+      <div>{{item.score}} points by <a href="/" class="item__header-link small">{{item.by}}</a> <a href="/" class="item__header-link small">{{item.time}}</a></div>
+      <div>{{item.descendants}} comments</div>
+    </div>
+  </div>
 </div>
