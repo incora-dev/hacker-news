@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { TimeAgoPipe } from 'time-ago-pipe';
 
 import { NewsComponent } from './news.component';
 
@@ -20,6 +21,7 @@ describe('NewsComponent', () => {
         NewsComponent,
         TableComponent,
         PaginationBarComponent,
+        TimeAgoPipe,
       ]
     })
     .compileComponents();

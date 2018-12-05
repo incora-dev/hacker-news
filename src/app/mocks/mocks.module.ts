@@ -9,7 +9,6 @@ import { StoreModule } from '@ngrx/store';
 import { reducers } from 'app/store/app.states';
 
 @NgModule({
-  declarations: [],
   imports: [
     CommonModule,
     MocksRoutingModule,

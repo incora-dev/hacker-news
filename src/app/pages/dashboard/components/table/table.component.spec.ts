@@ -1,12 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
+import { TimeAgoPipe } from 'time-ago-pipe';
 
 import { TableComponent } from './table.component';
 
 import { AppModule } from '../../../../app.module';
 import { MocksModule } from '../../../../mocks/mocks.module';
 import { Item } from 'app/store/models/item.models';
-import { element } from '@angular/core/src/render3';
-import { By } from '@angular/platform-browser';
 
 describe('TableComponent', () => {
   let component: TableComponent;
@@ -17,7 +17,10 @@ describe('TableComponent', () => {
       imports: [
         MocksModule,
       ],
-      declarations: [ TableComponent ]
+      declarations: [
+        TableComponent,
+        TimeAgoPipe,
+      ],
     })
     .compileComponents();
   }));

@@ -7,8 +7,8 @@ describe('hacker-news App', () => {
     page = new HackerNewsPage();
   });
 
-  it('should display welcome message', () => {
+  it('should render items', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getItem()).toBeTruthy();
   });
 });
