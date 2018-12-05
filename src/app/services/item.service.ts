@@ -17,7 +17,9 @@ const {
   endpoints,
 } = environment;
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class ItemService {
   constructor(private http: HttpClient) {}
 

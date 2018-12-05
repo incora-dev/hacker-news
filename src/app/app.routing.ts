@@ -1,3 +1,4 @@
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './guards';
 
@@ -26,4 +27,12 @@ const appRoutes: Routes = [
   { path: '**', redirectTo: 'login' },
 ];
 
-export const routing = RouterModule.forRoot(appRoutes);
+@NgModule({
+  imports: [
+    RouterModule,
+    RouterModule.forRoot(appRoutes),
+  ],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {
+}

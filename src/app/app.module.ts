@@ -8,7 +8,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
 import { reducers } from './store/app.states';
-import { routing } from './app.routing';
+import { AppRoutingModule } from './app.routing';
 import { AuthGuard } from './guards';
 
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
@@ -48,7 +48,7 @@ import { PaginationBarComponent } from './pages/dashboard/components/pagination-
       ItemEffects,
       NewsEffects,
     ]),
-    routing,
+    AppRoutingModule,
   ],
   providers: [
     AuthGuard,
