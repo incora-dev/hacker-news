@@ -1,0 +1,19 @@
+@import '../styles/variables.scss';
+
+@mixin font-style ($size: $sizeSmall, $weight: $lightWeight, $lineHeight: 14px, $color: $black, $textDecoration: none) {
+  @if $size {
+    font-size: $size;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $lineHeight {
+    line-height: $lineHeight;
+  }
+  @if $color {
+    color: $color;
+  }
+  @if $textDecoration {
+    text-decoration: $textDecoration;
+  }
+}

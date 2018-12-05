@@ -1,2 +1,4 @@
-<app-table [items]="itemState.items"></app-table>
-<app-pagination-bar [pageCount]="pageCount" (changePage)="loadStoriesByPage($event)"></app-pagination-bar>
+<div class="news__main">
+  <app-table [items]="itemState.items" [startIndex]="startIndex"></app-table>
+  <app-pagination-bar [pageCount]="pageCount" (changePage)="loadStoriesByPage($event)"></app-pagination-bar>
+</div>

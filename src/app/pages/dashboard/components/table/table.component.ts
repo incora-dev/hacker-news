@@ -8,6 +8,7 @@ import { Item } from '../../../../store/models/item.models';
 })
 export class TableComponent implements OnInit {
   @Input() items: Item[];
+  @Input() startIndex: number;
 
   constructor() { }
 

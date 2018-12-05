@@ -17,6 +17,7 @@ export class NewsComponent implements OnInit {
   public newsState: NewsState;
   public itemState: ItemState;
   public pageCount = 1;
+  public startIndex = 1;
 
   constructor(
     private _store: Store<AppState>,
@@ -45,11 +46,12 @@ export class NewsComponent implements OnInit {
     );
   }
 
-  public loadStoriesByPage(page: number = 1) {
+  public loadStoriesByPage(page: number = 0) {
     const { stories } = this.newsState || {} as NewsState;
+    this.startIndex = ITEMS_PER_PAGE * page + 1;
     if (stories && stories.length) {
       stories
-        .slice(ITEMS_PER_PAGE * (page - 1), ITEMS_PER_PAGE * page - 1)
+        .slice(ITEMS_PER_PAGE * page, ITEMS_PER_PAGE * (page + 1))
         .forEach((story) => {
           this._store.dispatch(new ItemGetOne(story));
         });
