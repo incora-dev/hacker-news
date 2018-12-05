@@ -44,5 +44,8 @@
     display: flex;
     @include font-style($size: $sizexs, $weight: $lightWeight, $lineHeight: 16px, $color: $gray, $textDecoration: none);
     letter-spacing: 0.3px;
+    @media screen and (max-width: 440px) {
+      flex-direction: column;
+    }
   }
 }

@@ -3,5 +3,9 @@
     width: 100%;
     max-width: 900px;
     margin: 30px auto;
+    box-sizing: border-box;
+    @media screen and (max-width: 991px) {
+      padding: 0 15px;
+    }
   }
 }

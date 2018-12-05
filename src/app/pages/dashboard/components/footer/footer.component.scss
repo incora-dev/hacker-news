@@ -11,6 +11,9 @@
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
+    @media screen and (max-width: 991px) {
+      padding: 0 15px;
+    }
   }
   &__menu {
     margin-bottom: 20px;
